@@ -35,8 +35,8 @@ const PORT = process.env.PORT || 5000;
 
 // Middleware
 // Restrict CORS to frontend origin if provided, otherwise allow all (useful for dev)
-const corsOrigin = process.env.FRONTEND_URL || '*';
-app.use(cors({ origin: corsOrigin }));
+app.use(cors({ origin: "*" }));
+
 
 // Parse JSON requests with increased limit and capture raw body for webhook signature verification
 app.use(express.json({
